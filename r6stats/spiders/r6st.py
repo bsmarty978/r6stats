@@ -8,25 +8,15 @@ class R6stSpider(scrapy.Spider):
 
     def parse(self, response):
         def para_value(dataobject):
-            pass
-
-        seasonal = {}
-        alltime = {}
-        count = 0
-        seasonal['overview'] = {}
-        alltime['overview'] = {}
-        # seasonal['genral'] = {}
-        alltime['genral'] = {}
-        alltime['ranked'] = {}
-        seasonal['ranked'] = {}
-        alltime['unranked'] = {}
-        # seasonal['unranked'] = {}
-        alltime['casual'] = {}
-        seasonal['casual'] = {}
+            p = dataobject.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
+            v = dataobject.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            return p,v
 
         ign = response.xpath("normalize-space(//h1[@class='trn-profile-header__name']/span[1]/text())").get()
         total_matches = response.xpath("//div[@class='trn-card__header-subline']/text()").get()
-
+        seasonal = {}
+        alltime = {}
+        
         season_name = response.xpath("(//h2[@class='trn-card__header-title'])[5]/text()").get()
         season_total_matches =  response.xpath("normalize-space(//span[@class='trn-card__header-subline']/text())").get()
         seasonal['name'] = season_name
@@ -36,9 +26,19 @@ class R6stSpider(scrapy.Spider):
         datasets = response.xpath("//div[@class='trn-defstats trn-defstats--width4']")
         dataset2 = response.xpath("//div[@class='trn-defstats ']")
 
+        count = 0
+        seasonal['overview'] = {}
+        alltime['overview'] = {}
+        alltime['genral'] = {}
+        alltime['ranked'] = {}
+        seasonal['ranked'] = {}
+        alltime['unranked'] = {}
+        alltime['casual'] = {}
+        seasonal['casual'] = {}
+
+
         for i in o:
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             if p == 'Top Operators':
                 v = i.xpath(".//img/@title").getall()
             print(f"{p}:{v}")
@@ -49,47 +49,39 @@ class R6stSpider(scrapy.Spider):
             count += 1
 
         for i in datasets[0].xpath(".//div[@class='trn-defstat trn-defstat--large']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             alltime['overview'][p] = v
         
         for i in datasets[1].xpath(".//div[@class='trn-defstat trn-defstat--large']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             seasonal['overview'][p] = v
 
 
         for i in datasets[2].xpath(".//div[@class='trn-defstat']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             alltime['genral'][p] = v
 
 
         for i in datasets[3].xpath(".//div[@class='trn-defstat']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             seasonal['ranked'][p] = v
 
 
         for i in datasets[4].xpath(".//div[@class='trn-defstat']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             seasonal['casual'][p] = v
 
 
         for i in dataset2[0].xpath(".//div[@class='trn-defstat']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             alltime['ranked'][p] = v
 
         for i in dataset2[1].xpath(".//div[@class='trn-defstat']"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             alltime['unranked'][p] = v
 
         for i in response.xpath("//div[@class='trn-defstats trn-defstats--width5']/div"):
-            p = i.xpath("normalize-space(.//div[@class='trn-defstat__name']/text())").get()
-            v = i.xpath("normalize-space(.//div[@class='trn-defstat__value']/text())").get()
+            p,v = para_value(i)
             alltime['casual'][p] = v          
 
 

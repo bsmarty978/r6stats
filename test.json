@@ -69,6 +69,8 @@
         }
     },
     "seasonal": {
+        "name": "Crimson Heist",
+        "total matches": "168 Matches",
         "overview": {
             "Best MMR": "2532",
             "Started Collecting": "4/1/2021",
@@ -105,8 +107,6 @@
             "Max Rank": "-",
             "MMR": "1,772",
             "Max MMR": "0"
-        },
-        "name": "Crimson Heist",
-        "total matches": "168 Matches"
+        }
     }
 }]
