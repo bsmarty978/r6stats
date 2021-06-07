@@ -1,0 +1,112 @@
+[{
+    "ign": "NaMeles_hOstAge",
+    "total_matches": "3,240 Matches",
+    "alltime": {
+        "overview": {
+            "Level": "190",
+            "Best MMR Rating": "2,500",
+            "Rank": "SILVER III",
+            "Avg Seasonal MMR": "2,202",
+            "Top Operators": [
+                "CAPITÃO",
+                "CAVEIRA",
+                "MIRA"
+            ],
+            "Wins": "1,367",
+            "Win %": "42.2%",
+            "Kills": "8,378",
+            "KD": "0.81"
+        },
+        "genral": {
+            "Headshot %": "31.5%",
+            "KD": "0.81",
+            "Deaths": "10,302",
+            "Headshots": "2,639",
+            "Wins": "1,367",
+            "Losses": "1,872",
+            "Win %": "42.2%",
+            "Time Played": "801h",
+            "Matches Played": "3,240",
+            "Total XP": "25,533,250",
+            "Melee Kills": "151",
+            "Blind Kills": "14"
+        },
+        "ranked": {
+            "Time Played": "56h 22m 39s",
+            "Wins": "54",
+            "Losses": "126",
+            "Matches": "180",
+            "Deaths": "784",
+            "Kills": "472",
+            "Win %": "30%",
+            "KD": "0.60",
+            "Kills/match": "2.62",
+            "Kills/min": "0.14"
+        },
+        "unranked": {
+            "Time Played": "174h 36m 49s",
+            "Wins": "252",
+            "Losses": "348",
+            "Matches": "600",
+            "Deaths": "2,244",
+            "Kills": "2,192",
+            "Win %": "42%",
+            "KD": "0.98",
+            "Kills/match": "3.65",
+            "Kills/min": "0.21"
+        },
+        "casual": {
+            "Time Played": "571h 50m 22s",
+            "Wins": "1,061",
+            "Losses": "1,398",
+            "Matches": "2,459",
+            "Deaths": "7,274",
+            "Kills": "5,714",
+            "Win %": "43.1%",
+            "KD": "0.79",
+            "Kills/match": "2.32",
+            "Kills/min": "0.17"
+        }
+    },
+    "seasonal": {
+        "overview": {
+            "Best MMR": "2532",
+            "Started Collecting": "4/1/2021",
+            "Time Played": "1d 22h 7m 18s",
+            "Wins": "90",
+            "Win %": "47.6%",
+            "Kills": "656",
+            "K/D": "1.07"
+        },
+        "ranked": {
+            "K/D": "0.74",
+            "Kills/Match": "2.50",
+            "Kills": "25",
+            "Deaths": "34",
+            "Win %": "50.00",
+            "Wins": "5",
+            "Losses": "5",
+            "Abandons": "0",
+            "Rank": "SILVER III",
+            "Max Rank": "SILVER III",
+            "MMR": "2,311",
+            "Max MMR": "2,311"
+        },
+        "casual": {
+            "K/D": "1.13",
+            "Kills/Match": "3.41",
+            "Kills": "539",
+            "Deaths": "475",
+            "Win %": "44.94",
+            "Wins": "71",
+            "Losses": "70",
+            "Abandons": "17",
+            "Rank": "BRONZE IV",
+            "Max Rank": "-",
+            "MMR": "1,772",
+            "Max MMR": "0"
+        },
+        "name": "Crimson Heist",
+        "total matches": "168 Matches"
+    }
+}]
