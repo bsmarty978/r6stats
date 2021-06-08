@@ -75,13 +75,18 @@ class R6stSpider(scrapy.Spider):
             p,v = para_value(i)
             alltime['genral'][p] = v
 
-        for i in datasets[3].xpath(".//div[@class='trn-defstat']"):
-            p,v = para_value(i)
-            seasonal['ranked'][p] = v
+        if len(datasets) == 5:
+            for i in datasets[3].xpath(".//div[@class='trn-defstat']"):
+                p,v = para_value(i)
+                seasonal['ranked'][p] = v
 
-        for i in datasets[4].xpath(".//div[@class='trn-defstat']"):
-            p,v = para_value(i)
-            seasonal['casual'][p] = v
+            for i in datasets[4].xpath(".//div[@class='trn-defstat']"):
+                p,v = para_value(i)
+                seasonal['casual'][p] = v
+        else:
+            for i in datasets[3].xpath(".//div[@class='trn-defstat']"):
+                p,v = para_value(i)
+                seasonal['casual'][p] = v
 
         count_ds2 = 0
         for dataset in dataset2:
