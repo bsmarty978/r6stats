@@ -32,7 +32,6 @@ e.g. = scrapy crawl r6st -a NaMeles_hOstAge pl=pc -o data.json
 
 Given example will store the data into data.json file.
 
-
 You can also make class of the spider and use it in your project host it locally using  [Scrapyd](https://github.com/scrapy/scrapyd) .
 
 If you like my work, Check out other works I do.
@@ -43,4 +42,4 @@ Contact:
 
 IG: [🌚乃卄卂ᐯ乇丂卄🌝 (@\_chevi.\_)](https://www.instagram.com/_chevi._/)
 
-Mail: [Gmail](bsmarty978@gmail.com)
+Mail: [Gmail](mailto:bsmarty978@gmail.com)
