@@ -17,7 +17,7 @@ step 4: openn terminal and run following command.
 ```
 scrapy crawl r6st -a p=[playername] -a pl=[plaform]
 
-e.g. = scrapy crawl r6st -a NaMeles_hOstAge pl=pc
+e.g. scrapy crawl r6st -a NaMeles_hOstAge pl=pc
 ```
 
 This will run spider and scrap the data, but it won't store the data.
@@ -27,7 +27,7 @@ for storing data into *json* or *csv*  run follwing command.
 ```
 scrapy crawl r6st -a p=[playername] -a pl=[plaform] -o [filename/path]
 
-e.g. = scrapy crawl r6st -a NaMeles_hOstAge pl=pc -o data.json
+e.g. scrapy crawl r6st -a NaMeles_hOstAge pl=pc -o data.json
 ```
 
 Given example will store the data into data.json file.
